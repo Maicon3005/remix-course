@@ -34,7 +34,7 @@ __export(assets_manifest_exports, {
 });
 var assets_manifest_default, init_assets_manifest = __esm({
   "server-assets-manifest:@remix-run/dev/assets-manifest"() {
-    assets_manifest_default = { version: "4f8a1a2d", entry: { module: "/build/entry.client-2ORXIW65.js", imports: ["/build/_shared/chunk-POPTCZXC.js", "/build/_shared/chunk-NLQNPAAV.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-JLRDOCZI.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-NFC7CXLA.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/posts._index": { id: "routes/posts._index", parentId: "root", path: "posts", index: !0, caseSensitive: void 0, module: "/build/routes/posts._index-7X2NTDJM.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, cssBundleHref: void 0, hmr: void 0, url: "/build/manifest-4F8A1A2D.js" };
+    assets_manifest_default = { version: "392a55aa", entry: { module: "/build/entry.client-UDUEKJVH.js", imports: ["/build/_shared/chunk-ZS4UPKJJ.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-C7FU7WXW.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/_index": { id: "routes/_index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/_index-DH2TJME4.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/posts._index": { id: "routes/posts._index", parentId: "root", path: "posts", index: !0, caseSensitive: void 0, module: "/build/routes/posts._index-VY7GX2LW.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, cssBundleHref: void 0, hmr: void 0, url: "/build/manifest-392A55AA.js" };
   }
 });
 
@@ -237,18 +237,48 @@ function App() {
 // app/routes/posts._index.tsx
 var posts_index_exports = {};
 __export(posts_index_exports, {
-  default: () => Posts
+  default: () => Posts,
+  loader: () => loader
 });
-var import_jsx_dev_runtime3 = require("react/jsx-dev-runtime");
+var import_node2 = require("@remix-run/node"), import_react3 = require("@remix-run/react");
+
+// app/models/post.server.ts
+async function getPosts() {
+  return [
+    { slug: "my-first-post", title: "My First Post" },
+    { slug: "90s-mixtape", title: "A Mixtape I Made Just For You" }
+  ];
+}
+
+// app/routes/posts._index.tsx
+var import_jsx_dev_runtime3 = require("react/jsx-dev-runtime"), loader = async () => (0, import_node2.json)({
+  posts: await getPosts()
+});
 function Posts() {
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("main", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("h1", { children: "Posts" }, void 0, !1, {
+  let { posts } = (0, import_react3.useLoaderData)();
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("main", { children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("h1", { children: "Posts" }, void 0, !1, {
+      fileName: "app/routes/posts._index.tsx",
+      lineNumber: 15,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("ul", { children: posts.map((post) => /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("li", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)(import_react3.Link, { to: post.slug, children: post.title }, void 0, !1, {
+      fileName: "app/routes/posts._index.tsx",
+      lineNumber: 19,
+      columnNumber: 13
+    }, this) }, post.slug, !1, {
+      fileName: "app/routes/posts._index.tsx",
+      lineNumber: 18,
+      columnNumber: 11
+    }, this)) }, void 0, !1, {
+      fileName: "app/routes/posts._index.tsx",
+      lineNumber: 16,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, !0, {
     fileName: "app/routes/posts._index.tsx",
-    lineNumber: 4,
-    columnNumber: 13
-  }, this) }, void 0, !1, {
-    fileName: "app/routes/posts._index.tsx",
-    lineNumber: 3,
-    columnNumber: 9
+    lineNumber: 14,
+    columnNumber: 5
   }, this);
 }
 
@@ -258,9 +288,9 @@ __export(index_exports, {
   default: () => Index,
   meta: () => meta
 });
-var import_react3 = require("@remix-run/react"), import_jsx_dev_runtime4 = require("react/jsx-dev-runtime"), meta = () => [{ title: "New Remix App" }];
+var import_react4 = require("@remix-run/react"), import_jsx_dev_runtime4 = require("react/jsx-dev-runtime"), meta = () => [{ title: "New Remix App" }];
 function Index() {
-  return /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "mx-auto mt-16 max-w-7xl text-center", children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(import_react3.Link, { to: "/posts", className: "text-xl text-blue-600 underline", children: "Blog Posts" }, void 0, !1, {
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { className: "mx-auto mt-16 max-w-7xl text-center", children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(import_react4.Link, { to: "/posts", className: "text-xl text-blue-600 underline", children: "Blog Posts" }, void 0, !1, {
     fileName: "app/routes/_index.tsx",
     lineNumber: 11,
     columnNumber: 7

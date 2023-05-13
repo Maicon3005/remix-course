@@ -160,3 +160,8 @@ sketch
 /public/build
 
 # End of https://www.toptal.com/developers/gitignore/api/remix,node,react
+
+/cypress/screenshots
+/cypress/videos
+/prisma/data.db
+/prisma/data.db-journal

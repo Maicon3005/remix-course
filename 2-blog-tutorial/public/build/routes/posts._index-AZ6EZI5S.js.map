@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["empty-module:~/models/post.server", "browser-route-module:routes/posts._index.tsx?browser", "../../../app/routes/posts._index.tsx"],
+  "sourcesContent": ["module.exports = {};", "export { default } from \"./routes/posts._index.tsx\";", "import { json } from \"@remix-run/node\";\r\nimport { Link, useLoaderData } from \"@remix-run/react\";\r\nimport { getPosts } from \"~/models/post.server\";\r\n\r\nexport const loader = async () => {\r\n  return json({\r\n    posts: await getPosts(),\r\n  });\r\n};\r\n\r\nexport default function Posts() {\r\n  const { posts } = useLoaderData<typeof loader>();\r\n  return (\r\n    <main>\r\n      <h1>Posts</h1>\r\n      <ul>\r\n        {posts.map((post) => (\r\n          <li key={post.slug}>\r\n            <Link to={post.slug} className=\"text-blue-600 underline\">\r\n              {post.title}\r\n            </Link>\r\n          </li>\r\n        ))}\r\n      </ul>\r\n    </main>\r\n  );\r\n}\r\n"],
+  "mappings": ";;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,WAAO,UAAU,CAAC;AAAA;AAAA;;;ACAlB;AAAA;AAAA;AAAA;AAAA;;;ACAA;AAAA;AAAA;AAAA;AAAA;AAEA,kBAAyB;AAYnB;AAJS,SAAR,QAAyB;AAC9B,QAAM,EAAE,MAAM,IAAI,cAA6B;AAC/C,SACE,mDAAC,UACC;AAAA,uDAAC,QAAG,qBAAJ;AAAA;AAAA;AAAA;AAAA,WAAS;AAAA,IACT,mDAAC,QACE,gBAAM,IAAI,CAAC,SACV,mDAAC,QACC,6DAAC,QAAK,IAAI,KAAK,MAAM,WAAU,2BAC5B,eAAK,SADR;AAAA;AAAA;AAAA;AAAA,WAEA,KAHO,KAAK,MAAd;AAAA;AAAA;AAAA;AAAA,WAIA,CACD,KAPH;AAAA;AAAA;AAAA;AAAA,WAQA;AAAA,OAVF;AAAA;AAAA;AAAA;AAAA,SAWA;AAEJ;",
+  "names": []
+}
