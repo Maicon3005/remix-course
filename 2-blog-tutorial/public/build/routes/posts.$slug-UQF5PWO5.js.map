@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["browser-route-module:routes/posts.$slug.tsx?browser", "../../../app/routes/posts.$slug.tsx"],
-  "sourcesContent": ["export { default } from \"./routes/posts.$slug.tsx\";", "import { LoaderArgs, json } from \"@remix-run/node\";\r\nimport { useLoaderData } from \"@remix-run/react\";\r\n\r\nexport const loader = async ({ params }: LoaderArgs) => {\r\n  return json({ slug: params.slug });\r\n};\r\n\r\nexport default function PostSlug() {\r\n  const { slug } = useLoaderData<typeof loader>();\r\n  return (\r\n    <main className=\"mx-auto max-w-4xl\">\r\n      <h1 className=\"my-6 border-b-2 text-center text-3xl\">\r\n        Some Post: {slug}\r\n      </h1>\r\n    </main>\r\n  );\r\n}\r\n"],
-  "mappings": ";;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;;;ACAA;AAAA;AAAA;AAAA;AAAA;AAWM;AAJS,SAAR,WAA4B;AACjC,QAAM,EAAE,KAAK,IAAI,cAA6B;AAC9C,SACE,mDAAC,UAAK,WAAU,qBACd,6DAAC,QAAG,WAAU,wCAAuC;AAAA;AAAA,IACvC;AAAA,OADd;AAAA;AAAA;AAAA;AAAA,SAEA,KAHF;AAAA;AAAA;AAAA;AAAA,SAIA;AAEJ;",
-  "names": []
-}
