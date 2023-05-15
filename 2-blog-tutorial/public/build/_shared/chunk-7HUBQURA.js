@@ -4,6 +4,7 @@ var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
 var __getProtoOf = Object.getPrototypeOf;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
+var __defNormalProp = (obj, key, value) => key in obj ? __defProp(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
 var __esm = (fn, res) => function __init() {
   return fn && (res = (0, fn[__getOwnPropNames(fn)[0]])(fn = 0)), res;
 };
@@ -26,6 +27,10 @@ var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__ge
   isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target,
   mod
 ));
+var __publicField = (obj, key, value) => {
+  __defNormalProp(obj, typeof key !== "symbol" ? key + "" : key, value);
+  return value;
+};
 
 // node_modules/esbuild-plugin-polyfill-node/polyfills/global.js
 var init_global = __esm({
@@ -1966,6 +1971,7 @@ export {
   __esm,
   __commonJS,
   __toESM,
+  __publicField,
   init_global,
   init_dirname,
   init_filename,
@@ -1977,4 +1983,4 @@ export {
 @jspm/core/nodelibs/browser/buffer.js:
   (*! ieee754. BSD-3-Clause License. Feross Aboukhadijeh <https://feross.org/opensource> *)
 */
-//# sourceMappingURL=/build/_shared/chunk-DG4HR4CT.js.map
+//# sourceMappingURL=/build/_shared/chunk-7HUBQURA.js.map

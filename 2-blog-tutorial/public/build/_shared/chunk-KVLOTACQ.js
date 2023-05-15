@@ -5,11 +5,11 @@ import {
   init_filename,
   init_global,
   init_process
-} from "/build/_shared/chunk-DG4HR4CT.js";
+} from "/build/_shared/chunk-7HUBQURA.js";
 
-// empty-module:~/session.server
-var require_session = __commonJS({
-  "empty-module:~/session.server"(exports, module) {
+// empty-module:~/models/post.server
+var require_post = __commonJS({
+  "empty-module:~/models/post.server"(exports, module) {
     init_global();
     init_dirname();
     init_filename();
@@ -20,6 +20,6 @@ var require_session = __commonJS({
 });
 
 export {
-  require_session
+  require_post
 };
-//# sourceMappingURL=/build/_shared/chunk-5B6WUN7S.js.map
+//# sourceMappingURL=/build/_shared/chunk-KVLOTACQ.js.map

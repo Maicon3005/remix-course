@@ -5,7 +5,7 @@ import {
   init_filename,
   init_global,
   init_process
-} from "/build/_shared/chunk-DG4HR4CT.js";
+} from "/build/_shared/chunk-7HUBQURA.js";
 
 // empty-module:~/models/note.server
 var require_note = __commonJS({
@@ -22,4 +22,4 @@ var require_note = __commonJS({
 export {
   require_note
 };
-//# sourceMappingURL=/build/_shared/chunk-AC7UQQEL.js.map
+//# sourceMappingURL=/build/_shared/chunk-QBLDIPXF.js.map
